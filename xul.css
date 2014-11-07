@@ -1,13 +1,12 @@
 /* LAYOUT */
 
 * {
+  -moz-appearance: none;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  -moz-appearance: none;
   font-family: sans-serif;
   font-size: 12px;
-  cursor: default;
 }
 
 html {
@@ -22,6 +21,7 @@ body {
 box, hbox, vbox, spacer {
   display: flex;
   flex-basis: 0;
+  white-space: pre;
 }
 
 hbox {
@@ -43,7 +43,7 @@ vbox {
 [flex="9"] { flex-grow: 9 }
 
 [align="start"] { align-items: flex-start }
-[align="center"] { align-items: flex-center }
+[align="center"] { align-items: center }
 [align="end"] { align-items: flex-end }
 [align="baseline"] { align-items: flex-baseline }
 [align="stretch"] { align-items: flex-stretch }
