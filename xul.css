@@ -24,9 +24,15 @@ box, hbox, vbox, spacer {
   flex-basis: 0;
 }
 
-*[flex="1"] {
-  flex-grow: 1;
-}
+[flex="1"] { flex-grow: 1 }
+[flex="2"] { flex-grow: 2 }
+[flex="3"] { flex-grow: 3 }
+[flex="4"] { flex-grow: 4 }
+[flex="5"] { flex-grow: 5 }
+[flex="6"] { flex-grow: 6 }
+[flex="7"] { flex-grow: 7 }
+[flex="8"] { flex-grow: 8 }
+[flex="9"] { flex-grow: 9 }
 
 hbox {
   flex-flow: row;
