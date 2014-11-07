@@ -41,7 +41,7 @@ vbox {
 .debug hbox,
 .debug vbox,
 .debug box,
-.debug spacer) {
+.debug spacer {
   min-width: 20px;
   min-height: 20px;
   margin: 10px;
