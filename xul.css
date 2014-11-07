@@ -24,6 +24,14 @@ box, hbox, vbox, spacer {
   flex-basis: 0;
 }
 
+hbox {
+  flex-flow: row;
+}
+
+vbox {
+  flex-flow: column;
+}
+
 [flex="1"] { flex-grow: 1 }
 [flex="2"] { flex-grow: 2 }
 [flex="3"] { flex-grow: 3 }
@@ -34,13 +42,15 @@ box, hbox, vbox, spacer {
 [flex="8"] { flex-grow: 8 }
 [flex="9"] { flex-grow: 9 }
 
-hbox {
-  flex-flow: row;
-}
+[align="start"] { align-items: flex-start }
+[align="center"] { align-items: flex-center }
+[align="end"] { align-items: flex-end }
+[align="baseline"] { align-items: flex-baseline }
+[align="stretch"] { align-items: flex-stretch }
 
-vbox {
-  flex-flow: column;
-}
+[pack="start"] { justify-content: flex-start }
+[pack="center"] { justify-content: center }
+[pack="end"] { justify-content: flex-end }
 
 /* DEBUG */
 
@@ -48,8 +58,6 @@ vbox {
 .debug vbox,
 .debug box,
 .debug spacer {
-  min-width: 20px;
-  min-height: 20px;
   margin: 10px;
   padding: 10px;
   outline: 1px dashed black;
@@ -61,18 +69,16 @@ vbox {
 .debug vbox {
   background: blue;
 }
-.debug spacer, .debug box{
+.debug spacer,
+.debug box{
   background: yellow;
-}
-.debug hbox:before,
-.debug vbox:before {
-  position: absolute;
-  font-size: 10px;
-  top: 0; left: 0;
-  display: block;
 }
 .debug hbox:before,
 .debug vbox:before,
 .debug box:before {
+  position: absolute;
+  font-size: 10px;
+  top: 0; left: 0;
+  display: block;
   content: attr(class);
 }
