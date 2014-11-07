@@ -1,0 +1,72 @@
+/* LAYOUT */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -moz-appearance: none;
+  font-family: sans-serif;
+  font-size: 12px;
+  cursor: default;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+box, hbox, vbox, spacer {
+  display: flex;
+  flex-basis: 0;
+}
+
+*[flex="1"] {
+  flex-grow: 1;
+}
+
+hbox {
+  flex-flow: row;
+}
+
+vbox {
+  flex-flow: column;
+}
+
+/* DEBUG */
+
+.debug hbox,
+.debug vbox,
+.debug box,
+.debug spacer) {
+  min-width: 20px;
+  min-height: 20px;
+  margin: 10px;
+  padding: 10px;
+  outline: 1px dashed black;
+  position: relative;
+}
+.debug hbox {
+  background: red;
+}
+.debug vbox {
+  background: blue;
+}
+.debug spacer, .debug box{
+  background: yellow;
+}
+.debug hbox:before,
+.debug vbox:before {
+  position: absolute;
+  font-size: 10px;
+  top: 0; left: 0;
+  display: block;
+}
+.debug hbox:before,
+.debug vbox:before,
+.debug box:before {
+  content: attr(class);
+}
